@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View stats, bio, and shared post grid.">
+    <title>Ali Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="container header-container">
+            <!-- Left: Logo -->
+            <a href="index.html" class="logo">
+                ALI<span>World</span>
+            </a>
+
+            <form class="search-form" action="#" method="GET">
+                <input type="text" class="search-input" placeholder="Search for friends, posts, or topics..." required>
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+
+           
+            <div class="header-right">
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="profile.html" class="nav-link active">Profile</a>
+                    <a href="explore.html" class="nav-link">Explore</a>
+                       <a href="about.html" class="nav-link ">About</a>
+                    <a href="auth.html" class="nav-link">Logout</a>
+                </nav>
+                <a href="profile.html">
+                    <img src="./images/avatar.jfif" alt="alir" class="header-avatar">
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+   
+    <div class="profile-container">
+        
+      
+        <section class="profile-header">
+            <!-- Cover image with gradient overlay -->
+            <div class="cover-image"></div>
+            
+            <!-- Profile Info and Avatar -->
+            <div class="profile-info-section">
+                <div style="display: flex; justify-content: center; align-items: center;">
+                <div class="profile-avatar-wrapper">
+                    <img src="./images/avatar.jfif" alt="Ali" class="profile-avatar">
+                </div>
+                </div>
+                
+                <h1 class="profile-name">Ali Nawaz</h1>
+                <p class="profile-tagline">Software Developer | Web Enthusiast | QA Engineer | Devops Engineer</p>
+                
+                <!-- Stats Row (Flexbox with gap) -->
+                <div class="profile-stats-row">
+                    <div class="profile-stat-item">
+                        <span class="profile-stat-number">2</span>
+                        <span class="profile-stat-label">Posts</span>
+                    </div>
+                    <div class="profile-stat-item">
+                        <span class="profile-stat-number">18</span>
+                        <span class="profile-stat-label">Followers</span>
+                    </div>
+                    <div class="profile-stat-item">
+                        <span class="profile-stat-number">1142</span>
+                        <span class="profile-stat-label">Following</span>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="profile-actions-row">
+                    <button class="btn btn-primary">Edit Profile</button>
+                    <button class="btn btn-secondary">Send Message</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Content Grid Section -->
+        <section class="profile-content-section">
+            <h2 class="section-title">
+                Recent Posts <span>(15)</span>
+            </h2>
+            
+            
+            <div class="post-grid">
+
+                <!-- Grid Item 1 -->
+                <div class="grid-item">
+                    <img src="./images/WhatsApp Image 2026-07-19 at 5.56.08 PM.jpeg" alt="Post 1">
+                    <div class="grid-item-overlay">
+                        <buttton>Delete</buttton>
+                        <buttton>Edit</buttton>
+                    </div>
+                </div>
+                
+                <!-- Grid Item 2 -->
+                <div class="grid-item">
+                    <img src="./images/WhatsApp Image 2026-07-19 at 5.56.09 PM.jpeg"" alt="Post 2">
+                    <div class="grid-item-overlay">
+                        <div class="grid-item-overlay">
+                        <buttton>Delete</buttton>
+                        <buttton>Edit</buttton>
+                    </div>
+                    </div>
+                </div>
+                
+                <!-- Grid Item 3 -->
+                <div class="grid-item">
+                    <img src="./images/WhatsApp Image 2026-07-19 at 5.56.08 PM.jpeg" alt="Post 3">
+                    <div class="grid-item-overlay">
+                       <div class="grid-item-overlay">
+                        <buttton>Delete</buttton>
+                        <buttton>Edit</buttton>
+                    </div>
+                </div>
+                </div>
+                
+                <!-- Grid Item 4 -->
+                <div class="grid-item">
+                    <img src="./images/WhatsApp Image 2026-07-19 at 5.56.09 PM.jpeg"" alt="Post 4">
+                    <div class="grid-item-overlay">
+                       <div class="grid-item-overlay">
+                        <buttton>Delete</buttton>
+                        <buttton>Edit</buttton>
+                    </div>
+                    </div>
+                </div>
+                
+                <!-- Grid Item 5 -->
+                <div class="grid-item">
+                    <img src="./images/WhatsApp Image 2026-07-19 at 5.56.08 PM.jpeg" alt="Post 5">
+                    <div class="grid-item-overlay">
+                       <div class="grid-item-overlay">
+                        <buttton>Delete</buttton>
+                        <buttton>Edit</buttton>
+                    </div>
+                    </div>
+                </div>
+                
+                <!-- Grid Item 6 -->
+                <div class="grid-item">
+                    <img src="./images/WhatsApp Image 2026-07-19 at 5.56.09 PM.jpeg" alt="Post 6">
+                    <div class="grid-item-overlay">
+                       <div class="grid-item-overlay">
+                        <buttton>Delete</buttton>
+                        <buttton>Edit</buttton>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

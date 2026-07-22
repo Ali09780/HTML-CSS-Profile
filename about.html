@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+<title>Ali Nawaz Portfolio</title>
+
+
+<style>
+
+/* ===== Reset ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+}
+
+/*
+.sticky-header{
+
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#0f172a;
+
+    padding:15px 0;
+
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.header-container{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+
+}
+
+
+.logo{
+
+    color:white;
+
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+
+}
+
+
+
+.logo span{
+
+    color:#38bdf8;
+
+}
+
+
+
+.search-form{
+
+    display:flex;
+    flex:1;
+    max-width:400px;
+}
+
+
+.search-input{
+
+    width:100%;
+    padding:10px 15px;
+    border:1px solod ;
+    outline:none;
+
+    border-radius:8px 0 0 8px;
+
+}
+/*
+.search-input::placeholder{
+    background-color: #1e293b;
+}
+    */
+
+.search-input:focus{
+
+         background-color: #928c97;
+         color:black;
+         box-shadow:0 10px 20px #ddd;
+         transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.search-btn{
+    padding:10px 20px;
+    border:none;
+    background:#2563eb;
+    color:white;
+
+    cursor:pointer;
+    border-radius:0 8px 8px 0;
+
+}
+.search-btn:hover{
+    background-color: #38bdf8;
+}
+
+*/
+
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+
+.nav-links{
+    display:flex;
+    gap:20px;
+
+}
+
+.nav-link{
+    color:white;
+    text-decoration:none;
+
+}
+
+
+.nav-link:hover,
+.active{
+
+    color:#38bdf8;
+}
+
+
+.header-avatar{
+
+    width:45px;
+
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid white;
+
+}
+
+
+
+.hero{
+
+    padding:70px 20px;
+    margin-top: 20px;
+    text-align:center;
+      border-radius:20px;
+    background:
+
+    linear-gradient(
+        135deg,
+        #0d41b0,
+        #ad74e2
+    );
+
+    color:white;
+
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:22px;
+}
+
+
+
+
+
+
+
+
+section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:50px 0;
+
+}
+
+
+
+.title{
+
+    text-align:center;
+
+    font-size:35px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+/* ===== Skills Flex ===== */
+
+
+.skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+
+.skill{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+}
+
+
+
+
+
+/* ===== CGPA Table ===== */
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+    box-shadow:0 10px 20px #ddd;
+
+}
+
+
+th{
+    background:#0f172a;
+    color:white;
+
+}
+
+
+
+th,td{
+
+    padding:15px;
+    text-align:center;
+    border:1px solid #ddd;
+
+}
+
+
+tr:hover{
+    background:#eff6ff;
+
+}
+
+
+
+
+
+/* ===== Projects Flex ===== */
+
+
+.projects{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+
+}
+
+.card{
+    width:280px;
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+    box-shadow:0 30px 40px rgba(0,0,0,.1);
+    transition:.3s;
+
+}
+
+.card:hover{
+    transform:translateY(10px);
+}
+
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+
+}
+
+/* Footer */
+
+
+footer{
+
+    background:#0f172a;
+
+    color:white;
+    text-align:center;
+    padding:30px;
+
+}
+
+/*
+.nav-link{
+    
+}
+*/
+
+
+@media(max-width:900px){
+.header-container{
+    flex-direction:column;
+}
+.header-right{
+    flex-direction:column;
+}
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+
+}
+</style>
+</head>
+<body>
+
+
+<!--------------
+
+/*
+<header class="sticky-header">
+<div class="container header-container">
+
+
+<a href="#" class="logo">
+ALI<span>World</span>
+</a>
+
+
+<form class="search-form">
+
+<input 
+type="text"
+class="search-input"
+placeholder="Search..."
+>
+ 
+<button class="search-btn">
+Search
+</button>
+
+</form>
+
+
+
+
+<div class="header-right">
+
+<nav class="nav-links">
+
+          <a class="nav-link " href="index.html">Home</a>
+          <a class="nav-link" href="profile.html">Profile</a>
+          <a class="nav-link" href="explore.html">Explore</a>
+             <a href="about.html" class="nav-link active">About</a>
+          <a class="nav-link" href="auth.html">Logout</a>
+        </nav>
+
+</nav>
+
+
+<img src="avatar.jfif" class="header-avatar">
+
+
+</div>
+
+
+</div>
+
+</header>
+
+---->
+
+ <header class="sticky-header">
+    <div class="container header-container">
+      <div class="logo">
+        ALI WORLD
+      </div>
+      
+      <form class="search-form">
+        <input type="search"  class="search-input" name="search" placeholder="Search for friends, posts, or topics">
+        <button type="submit" class="search-btn" style="border-radius:19px; margin-right:5px">Search</button>
+      
+      </form>
+      
+      <div class="header-right">
+        <nav class="nav-links" aria-label="main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="profile.html">Profile</a>
+          <a class="nav-link" href="explore.html">Explore</a>
+             <a href="about.html" class="nav-link active">About</a>
+          <a class="nav-link" href="auth.html">Logout</a>
+        </nav>
+        
+        <img src="./images/avatar.jfif" alt="Profile avatar" class="header-avatar">
+      </div>
+    </div>
+  </header>
+
+
+
+<section class="hero">
+
+<h1>
+Ali Nawaz
+</h1>
+
+
+<p>
+Software Engineering Student | MERN Stack Developer
+</p>
+
+
+</section>
+
+
+
+
+
+
+<!-- Skills -->
+
+
+<section id="skills">
+
+
+<h2 class="title">
+Technical Skills
+</h2>
+
+
+<div class="skills">
+
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">JavaScript</div>
+
+<div class="skill">React.js</div>
+
+<div class="skill">Node.js</div>
+
+<div class="skill">Express.js</div>
+
+<div class="skill">MongoDB</div>
+
+<div class="skill">C++</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CGPA -->
+
+
+<section id="education">
+
+<h2 class="title">
+Semester Wise CGPA
+</h2>
+
+<table>
+   <tr>
+      <th>Semester</th>
+      <th>Program</th>
+      <th>CGPA</th>
+
+   </tr>
+
+   <tr>
+      <td>Semester 1</td>
+      <td>Software Engineering</td>
+      <td>3.20</td>
+   </tr>
+
+    <tr>
+      <td>Semester 2</td>
+      <td>Software Engineering</td>
+    <td>3.35</td>
+    </tr>
+
+     <tr>
+       <td>Semester 3</td>
+       <td>Software Engineering</td>
+       <td>3.45</td>
+     </tr>
+
+     <tr>
+       <td>Semester 4</td>
+        <td>Software Engineering</td>
+      <td>3.60</td>
+      </tr>
+
+      <tr>
+        <td>Semester 5</td>
+        <td>Software Engineering</td>
+        <td>3.70</td>
+    </tr>
+</table>
+
+</section>
+
+
+
+
+<!-- Projects -->
+
+
+<section id="projects">
+    <h2 class="title">
+         My Projects
+    </h2>
+
+        <div class="projects">
+            <div class="card">
+                <h3>E-Commerce Website</h3>
+
+            <p>
+            Full stack shopping website using React,
+            Node.js, Express and MongoDB.
+            </p>
+
+        </div>
+
+
+           <div class="card">
+                <h3>Flavor Haus</h3>
+                 <p>
+                     Home-based dining platform for booking
+                     food experiences.
+                </p>
+
+            </div>
+
+
+             <div class="card">
+               <h3>University Management System</h3>
+                <p>
+                  C++ application using OOP concepts 
+                and data structures.
+                    </p>
+
+              </div>
+
+
+
+
+                <div class="card">
+                 <h3>React Native Apps</h3>
+                 <p>
+                    Mobile applications for booking and
+                     service platforms.
+                </p>
+
+                </div>
+          </div>
+
+</section>
+
+
+
+<footer>
+
+<h3>Ali Nawaz</h3>
+
+<p>
+Software Engineering Portfolio © 2026
+</p>
+
+</footer>
+
+
+
+</body>
+
+</html>

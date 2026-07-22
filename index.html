@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>ALi WORLD</title>
+</head>
+
+
+<body>
+  <header class="sticky-header">
+    <div class="container header-container">
+      <div class="logo">
+        ALI WORLD
+      </div>
+      
+      <form class="search-form">
+        <input type="search"  class="search-input" name="search" placeholder="Search for friends, posts, or topics">
+        <button type="submit" class="search-btn">Search</button>
+      
+      </form>
+      
+      <div class="header-right">
+        <nav class="nav-links" aria-label="main navigation">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="profile.html">Profile</a>
+          <a class="nav-link" href="explore.html">Explore</a>
+             <a href="about.html" class="nav-link ">About</a>
+          <a class="nav-link" href="auth.html">Logout</a>
+        </nav>
+        
+        <img src="./images/avatar.jfif" alt="Profile avatar" class="header-avatar">
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-layout">
+    <aside class="left-sidebar">
+
+      <div class="profile-card">
+        <img src="./images/avatar.jfif" alt="Profile Picture" class="profile-card-avatar">
+
+        <h2 class="profile-card-name">ALI NAWAZ</h2>
+        <p class="profile-card-title">Software Engineer</p>
+
+        <div class="sidebar-stats">
+          <div class="sidebar-stat-box">
+            <span class="sidebar-stat-num">0</span>
+            <span class="sidebar-stat-label">Posts</span>
+          </div>
+          <div class="sidebar-stat-box">
+            <span class="sidebar-stat-num">323</span>
+
+            <span class="sidebar-stat-label">Followers</span>
+          </div>
+          <div class="sidebar-stat-box">
+            <span class="sidebar-stat-num">32</span>
+            <span class="sidebar-stat-label">Following</span>
+          </div>
+        </div>
+
+        <div class="profile-card-bio">
+          <h3>Bio:</h3>
+          <p>"Software developer creating animated,responsives,create websites"</p>
+        </div>
+        <a class="btn btn-secondary btn-full" href="profile.html">Profile</a>
+      </div>
+    </aside>
+
+
+    <section class="main-feed">
+
+      <div class="feed-header">
+        <div>
+          <h2 class="feed-title">Home Feed</h2>
+          <p class="text-muted">Stay connected and share updates with your network.</p>
+        </div>
+        <div class="feed-actions">
+
+          <button class="action-circle-btn btn-cyan" type="button">+</button>
+          <button class="action-circle-btn" type="button">Post</button>
+        </div>
+      </div>
+
+
+
+      <article class="post-card">
+        <div class="post-author">
+          <img src="./images/avatar.jfif" alt="picsprofile" class="author-avatar">
+          <div class="author-info">
+            <span class="author-name">Ali Nawaz</span>
+
+            <span class="post-time">Posted on: 2026-06-15</span>
+          </div>
+        </div>
+        <h3 class="post-title">Productive Study Day</h3>
+        <p class="post-content">Spent the day focusing on my studies and making good progress. Feeling accomplished!</p>
+        <img src="./images/How-Many-Hours-Should-You-Study-a-Day.jpg" alt="Post Image 1" class="post-image"
+          loading="lazy">
+        <footer class="post-footer">
+          <button class="post-action-btn" type="button">Like ❤️</button>
+          <button class="post-action-btn" type="button">Comment 💭</button>
+          <button class="post-action-btn" type="button">Share 🔗</button>
+        </footer>
+      </article>
+
+      <article class="post-card">
+        <div class="post-author">
+          <img src="./images/avatar.jfif" alt="Ali Khan profile" class="author-avatar">
+          <div class="author-info">
+            <span class="author-name">Khan</span>
+            <span class="post-time">Posted on: 2026-06-14</span>
+          </div>
+        </div>
+        <h3 class="post-title">Evening Walk</h3>
+        <p class="post-content">It is relaxing to take breaks sometimes.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPHY0PRaqbW__ai2R6sklTkMU93GSNzAgKhS4PG1fwSw&s=10" alt="Post Image 2" class="post-image"
+          loading="lazy">
+        <footer class="post-footer">
+          <button class="post-action-btn" type="button">Like ❤️</button>
+          <button class="post-action-btn" type="button">Comment 💭</button>
+          <button class="post-action-btn" type="button">Share 🔗</button>
+        </footer>
+      </article>
+
+      <article class="post-card">
+        <div class="post-author">
+          <img src="./images/avatar.jfif" alt="Hira Khan profile" class="author-avatar">
+          <div class="author-info">
+            <span class="author-name">Sajeela Khan</span>
+            <span class="post-time">Posted on: 2026-06-13</span>
+          </div>
+        </div>
+        <h3 class="post-title">Weekend Plans</h3>
+        <p class="post-content">Family are important as much as friends who stays by your side in hard times.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvnjpnQPw3P-xNQJ_mt56k3C1271oUG7O1RYa6Sy4KA&s=10" alt="Post Image 3" class="post-image"
+          loading="lazy">
+        <footer class="post-footer">
+          <button class="post-action-btn" type="button">Like ❤️</button>
+          <button class="post-action-btn" type="button">Comment 💭</button>
+          <button class="post-action-btn" type="button">Share 🔗</button>
+        </footer>
+      </article>
+    </section>
+
+
+
+
+    <aside class="right-sidebar">
+      <div class="sidebar-widget">
+        <h3 class="widget-title">Suggested Friends</h3>
+        <div class="suggestion-list">
+
+ <!--/-*    <div class="suggestion-item"></div>         */--> 
+          
+  <div class="suggestion-item">
+
+            <div class="suggestion-user">
+
+              <img src="./images/avatar.jfif" alt="AYYAN profile" class="suggestion-avatar">
+              <div class="suggestion-details">
+                <span class="suggestion-name">Ayyan</span>
+                <span class="suggestion-mutual">3 mutual friends</span>
+              </div>
+            </div>
+            <button class="btn btn-secondary" type="button">Add</button>
+          </div>
+          <div class="suggestion-item">
+            <div class="suggestion-user">
+              <img src="./images/avatar.jfif" alt="Mike Chen profile" class="suggestion-avatar">
+              <div class="suggestion-details">
+                <span class="suggestion-name">usman akhbar</span>
+                <span class="suggestion-mutual">1 mutual friend</span>
+              </div>
+            </div>
+            <button class="btn btn-secondary" type="button">Add</button>
+          </div>
+          <div class="suggestion-item">
+            <div class="suggestion-user">
+              <img src="./images/avatar.jfif" alt="Emma Davis profile" class="suggestion-avatar">
+              <div class="suggestion-details">
+                <span class="suggestion-name">Aliaa</span>
+                <span class="suggestion-mutual">2 mutual friends</span>
+              </div>
+            </div>
+            <button class="btn btn-secondary" type="button">Add</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="sidebar-widget">
+        <h3 class="widget-title">Trending Topics</h3>
+        <div class="trend-list">
+          <div class="trend-item">
+            <span class="trend-tag">#WebDevelopment</span>
+            <span class="trend-posts">12k posts</span>
+          </div>
+          <div class="trend-item">
+            <span class="trend-tag">#StudyRoutine</span>
+            <span class="trend-posts">8.3k posts</span>
+          </div>
+
+          <div class="trend-item">
+            <span class="trend-tag">#TravelDiaries</span>
+            <span class="trend-posts">4.1k posts</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 ALI WORLD. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

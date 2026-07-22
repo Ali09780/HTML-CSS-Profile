@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ali">
+    <title>ALi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<style>
+   .tooltip{
+
+    position:absolute;
+
+    bottom:120%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:black;
+    color:white;
+
+    padding:8px 12px;
+
+    border-radius:5px;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.3s;
+}
+
+
+/* show on hover */
+.btn-container:hover .tooltip{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+
+
+</style>
+<body>
+
+   
+    <header class="sticky-header">
+        <div class="container header-container">
+           
+            <a href="index.html" class="logo">
+             ALI<span>World</span>
+            </a>
+
+        
+            <form class="search-form" action="#" method="GET">
+                <input type="text" class="search-input" placeholder="Search for friends, posts, or topics..." required>
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+
+            
+            <div class="header-right">
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="profile.html" class="nav-link">Profile</a>
+                    <a href="explore.html" class="nav-link active">Explore</a>
+                     <a href="about.html" class="nav-link ">About</a>
+                    <a href="auth.html" class="nav-link">Logout</a>
+                </nav>
+                <a href="profile.html">
+                    <img src="./images/avatar.jfif" alt="Ali" class="header-avatar">
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+    
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+        
+      <section class="exploremain">
+
+    <h1>Explore</h1>
+
+    <p>
+        Here you can explore trending topics, popular posts, and discover new friends to connect with.
+    </p>
+
+    <button 
+        class="action-circle-btn btn-cyan"
+        style="
+            position:absolute;
+            right:1.5rem;
+            top:1.5rem;
+        "
+        title="More Info"
+        onmouseover="document.getElementById('info').style.display='block'"
+        onmouseout="document.getElementById('info').style.display='none'"
+    >
+        hover 
+    </button>
+
+
+    <span 
+        id="info"
+        style="
+            display:none;
+            position:absolute;
+            right:1.5rem;
+            top:4rem;
+            background:rgb(99, 123, 196);
+            color:white;
+            width:max-content;
+            padding:8px 12px;
+            border-radius:5px;
+        "
+    >
+        When you talk with me you know about me :(
+    </span>
+
+</section>  
+      
+
+
+        
+        <main class="page-layout" style="padding: 0;">
+            
+          
+            <aside class="left-sidebar">
+                <div class="sidebar-widget" style="padding: 0; overflow: hidden;">
+                    <div class="trending-widget-header">
+                        Trending Topics
+                    </div>
+                    <div class="trending-topics-body">
+                        <a href="#" class="trending-topic-link">#DailyLearning</a>
+                        <a href="#" class="trending-topic-link">#FitnessGoals</a>
+                        <a href="#" class="trending-topic-link">#FoodLovers</a>
+                        <a href="#" class="trending-topic-link">#TravelDiaries</a>
+                        <a href="#" class="trending-topic-link">#CodingJourney</a>
+                        <a href="#" class="trending-topic-link">#WebDesignOnly</a>
+                    </div>
+                </div>
+            </aside>
+
+           
+
+            <section class="main-feed">
+                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                    Popular Posts
+                </h3>
+
+                <!---- Post 1 -->
+                <article class="post-card">
+                    <div class="post-author">
+                        <img src="./images/avatar.jfif" alt="Ali Khan" class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Ali Khan</span>
+                            <span class="post-time">Posted on: 2026-06-15</span>
+                        </div>
+                    </div>
+                    <p class="post-content" style="margin-bottom: 0.75rem;">
+                        Learning web development and sharing daily coding progress. Here is a preview of my editor setup this morning!
+                    </p>
+                  
+                     
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80" alt="Code editor on a screen" class="post-image">
+                    
+                    
+                    <!-- Review Comments Section -->
+                    <div class="comment-section">
+                        <div  class="comment-item">
+
+                            <img src="./images/avatar.jfif" alt="Aleem Ghafoor" class="comment-avatar">
+                            <div class="comment-content">
+                                <span class="comment-author-name">Ali</span>
+                                <p class="comment-text">This theme looks awesome! What extension are you using for syntax highlighting?</p>
+                            </div>
+                        </div>
+                        <div class="comment-item">
+                            <img src="./images/avatar.jfif" alt="Jane Doe" class="comment-avatar">
+                            <div class="comment-content">
+                                <span class="comment-author-name">Ayyan</span>
+
+                                <p class="comment-text">Super clean workspace. Keep up the daily coding logs!</p>
+                            </div>
+                        </div>
+                       
+                        <div class="comment-input-wrapper">
+                            <img src="./images/avatar.jfif" alt="Aleem Ghafoor" class="comment-input-avatar">
+                            <input type="text" class="comment-input-field" placeholder="Write a comment...">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Explore Post 2 -->
+                <article class="post-card">
+                    <div class="post-author">
+                        <img src="./images/avatar.jfif" alt="Sophia Carter" class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Sophia Carter</span>
+                            <span class="post-time">Posted on: 2026-06-12</span>
+                        </div>
+                    </div>
+                    <p class="post-content" style="margin-bottom: 0.75rem;">
+                        Just returned from an incredible hike in the mountains. The views were breathtaking! #TravelDiaries
+                    </p>
+                    
+                   
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Mountain range under blue sky" class="post-image">
+                 
+                    <!-- Review Comments Section -->
+                    <div class="comment-section">
+                        <div class="comment-item">
+                                  <img src="./images/avatar.jfif" alt="John Smith" class="comment-avatar">
+                             <div class="comment-content">
+                                <span class="comment-author-name">John Smith</span>
+                                <p class="comment-text">Wow, that is stunning! Where was this taken?</p>
+                            </div>
+                        </div>
+                        <div class="comment-item">
+                               <img src="./images/avatar.jfif" alt="Sophia Carter" class="comment-avatar">
+                            <div class="comment-content">
+                                <span class="comment-author-name">Sophia Carter</span>
+                                <p class="comment-text">Thanks! It's Mount Rainier, highly recommend the skyline trail!</p>
+                            </div>
+                        </div>
+
+                        <!-- Add Comment Mockup -->
+                        <div class="comment-input-wrapper">
+                            <img src="./images/avatar.jfif" alt="ali" class="comment-input-avatar">
+                            <input type="text" class="comment-input-field" placeholder="Write a comment...">
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+
+
+            <!-- Right Column ---->
+            <aside class="right-sidebar">
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Add Friends</h4>
+                    <div class="suggestion-list">
+                        <div class="suggestion-item">
+                            <div class="suggestion-user">
+                                <img src="./images/avatar.jfif" alt="David Miller" class="suggestion-avatar">
+                                <div class="suggestion-details">
+                                    <span class="suggestion-name">Ronaldo</span>
+                                    <span class="suggestion-mutual">12 mutual friends</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Add Friend</button>
+                        </div>
+                        <div class="suggestion-item">
+                            <div class="suggestion-user">
+                                <img src="./images/avatar.jfif" alt="Emma Watson" class="suggestion-avatar">
+                                <div class="suggestion-details">
+                                    <span class="suggestion-name">Emma Watson</span>
+                                    <span class="suggestion-mutual">1 mutual friend</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Add Friend</button>
+                        </div>
+                        <div class="suggestion-item">
+                            <div class="suggestion-user">
+                                <img src="./images/avatar.jfif" alt="Michael Scott" class="suggestion-avatar">
+                                <div class="suggestion-details">
+                                    <span class="suggestion-name">Messi Messi</span>
+                                    <span class="suggestion-mutual">Direct Suggestion</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Add Friend</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+        </main>
+    </div>
+
+</body>
+</html>
