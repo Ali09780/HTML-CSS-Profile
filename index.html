@@ -15,55 +15,62 @@
       <div class="logo">
         ALI WORLD
       </div>
-      
+
       <form class="search-form">
-        <input type="search"  class="search-input" name="search" placeholder="Search for friends, posts, or topics">
+
+        <input type="search" class="search-input" name="search" placeholder="Search for friends, posts, or topics">
+
         <button type="submit" class="search-btn">Search</button>
-      
+
       </form>
-      
+
       <div class="header-right">
-        <nav class="nav-links" aria-label="main navigation">
+        <nav class="nav-links">
           <a class="nav-link active" href="index.html">Home</a>
           <a class="nav-link" href="profile.html">Profile</a>
           <a class="nav-link" href="explore.html">Explore</a>
-             <a href="about.html" class="nav-link ">About</a>
+          <a href="about.html" class="nav-link ">About</a>
           <a class="nav-link" href="auth.html">Logout</a>
+          
+          <button id="themeBtn" aria-label="Toggle Theme" style="background-color: blanchedalmond; border-radius: 14px; padding:6px"><span class="theme-icon">🌙</span> <span
+              class="theme-label">Dark</span></button>
         </nav>
-        
+
         <img src="./images/avatar.jfif" alt="Profile avatar" class="header-avatar">
       </div>
     </div>
   </header>
 
+  <!---<div style="position: sticky">--->
   <main class="container page-layout">
-    <aside class="left-sidebar">
+    <aside class="left-sidebar" style="position: sticky">
 
       <div class="profile-card">
-        <img src="./images/avatar.jfif" alt="Profile Picture" class="profile-card-avatar">
+        <img src="./images/avatar.jfif" alt="Profile Picture" class="profile-avatar">
 
         <h2 class="profile-card-name">ALI NAWAZ</h2>
         <p class="profile-card-title">Software Engineer</p>
 
-        <div class="sidebar-stats">
-          <div class="sidebar-stat-box">
-            <span class="sidebar-stat-num">0</span>
-            <span class="sidebar-stat-label">Posts</span>
+        <div class="sidebar-status">
+          <div class="sidebar-status-box">
+            <span class="sidebar-status-num">0</span>
+            <span class="sidebar-status-label">Posts</span>
           </div>
-          <div class="sidebar-stat-box">
-            <span class="sidebar-stat-num">323</span>
+          <div class="sidebar-status-box">
 
-            <span class="sidebar-stat-label">Followers</span>
+            <span class="sidebar-status-num">323</span>
+
+            <span class="sidebar-status-label">Followers</span>
           </div>
-          <div class="sidebar-stat-box">
-            <span class="sidebar-stat-num">32</span>
-            <span class="sidebar-stat-label">Following</span>
+          <div class="sidebar-status-box">
+            <span class="sidebar-status-num">32</span>
+            <span class="sidebar-status-label">Following</span>
           </div>
         </div>
 
-        <div class="profile-card-bio">
+        <div class="profile-card-bio" style="padding-right: 6px">
           <h3>Bio:</h3>
-          <p>"Software developer creating animated,responsives,create websites"</p>
+          <p>"Software developer creating animated,responsives,creat websites"</p>
         </div>
         <a class="btn btn-secondary btn-full" href="profile.html">Profile</a>
       </div>
@@ -79,20 +86,49 @@
         </div>
         <div class="feed-actions">
 
-          <button class="action-circle-btn btn-cyan" type="button">+</button>
+          <button id="plusBtn" class="action-circle-btn btn-cyan" class="infinity-btn" type="button" title="Create Post" >+</button>
           <button class="action-circle-btn" type="button">Post</button>
         </div>
       </div>
 
+      <!-- Simple Create Post Box -->
+      <div id="postBox"
+        style="display: none; background: var(--card); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border); margin-top: 1rem;">
+        <h3 style="margin-bottom: 0.5rem;">Create New Post</h3>
 
+        <input type="text" id="postTitle" placeholder="Post title..."
+          style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid var(--border); border-radius: 6px;">
+        <textarea id="postContent" maxlength="280" placeholder="What's on your mind?..."
+          style="width: 100%; height: 80px; padding: 8px; border: 1px solid var(--border); border-radius: 6px;"></textarea>
+
+        <div style="margin: 8px 0;">
+          <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 4px;">Upload Image
+            (Optional):</label>
+          <input type="file" id="postImageFile" accept="image/*" style="font-size: 0.85rem; color: var(--text);">
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+          <span id="charCount" style="font-size: 0.85rem; color: var(--text-muted);">280 characters remaining</span>
+          <button id="addPostBtn" class="btn btn-primary" type="button">Post</button>
+        </div>
+      </div>
 
       <article class="post-card">
-        <div class="post-author">
+        <div class="post__author">
           <img src="./images/avatar.jfif" alt="picsprofile" class="author-avatar">
           <div class="author-info">
-            <span class="author-name">Ali Nawaz</span>
+
+            <h6 class="author-name">Ali Nawaz</h6>
 
             <span class="post-time">Posted on: 2026-06-15</span>
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display: block; margin-right: -9px;"></span>
+
+
+              <div style="font-size: x-small;  color: var(--text-muted);">Delete</div>
+              <div style="font-size: x-small;   color: var(--text-muted);">Edit</div>
+            </div>
           </div>
         </div>
         <h3 class="post-title">Productive Study Day</h3>
@@ -100,69 +136,105 @@
         <img src="./images/How-Many-Hours-Should-You-Study-a-Day.jpg" alt="Post Image 1" class="post-image"
           loading="lazy">
         <footer class="post-footer">
-          <button class="post-action-btn" type="button">Like ❤️</button>
-          <button class="post-action-btn" type="button">Comment 💭</button>
+
+          <button class="post-action-btn" id="likeBtn1" type="button">Like ❤️ <span id="count1">12</span></button>
+          <button class="post-action-btn" id="commentBtn1" type="button">Comment 💭</button>
           <button class="post-action-btn" type="button">Share 🔗</button>
         </footer>
+        <div id="commentBox1"
+          style="display: none; margin-top: 10px; padding: 10px; background: var(--bg); border-radius: 8px;">
+          <p style="font-size: 0.875rem; color: var(--text);"><b>Ayyan:</b> Great progress!</p>
+          <p style="font-size: 0.875rem; color: var(--text);"><b>SAAD:</b> progress!</p>
+          <p style="font-size: 0.875rem; color: var(--text);"><b>Abdullah:</b> Good working!</p>
+        </div>
       </article>
 
       <article class="post-card">
-        <div class="post-author">
+        <div class="post__author">
           <img src="./images/avatar.jfif" alt="Ali Khan profile" class="author-avatar">
           <div class="author-info">
             <span class="author-name">Khan</span>
             <span class="post-time">Posted on: 2026-06-14</span>
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display: block; margin-right: -9px;"></span>
+              <div style="font-size: x-small;  color: var(--text-muted);">Delete</div>
+              <div style="font-size: x-small;   color: var(--text-muted);">Edit</div>
+            </div>
           </div>
         </div>
         <h3 class="post-title">Evening Walk</h3>
         <p class="post-content">It is relaxing to take breaks sometimes.</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPHY0PRaqbW__ai2R6sklTkMU93GSNzAgKhS4PG1fwSw&s=10" alt="Post Image 2" class="post-image"
-          loading="lazy">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPHY0PRaqbW__ai2R6sklTkMU93GSNzAgKhS4PG1fwSw&s=10"
+          alt="Post Image 2" class="post-image" loading="lazy">
         <footer class="post-footer">
-          <button class="post-action-btn" type="button">Like ❤️</button>
-          <button class="post-action-btn" type="button">Comment 💭</button>
+          <button class="post-action-btn" id="likeBtn2" type="button">Like ❤️ <span id="count2">5</span></button>
+          <button class="post-action-btn" id="commentBtn2" type="button">Comment 💭</button>
           <button class="post-action-btn" type="button">Share 🔗</button>
         </footer>
+        <div id="commentBox2"
+          style="display: none; margin-top: 10px; padding: 10px; background: var(--bg); border-radius: 8px;">
+          <p style="font-size: 0.875rem; color: var(--text);"><b>Usman:</b> Very relaxing indeed!</p>
+           <p style="font-size: 0.875rem; color: var(--text);"><b>Ayyan:</b> Great progress!</p>
+          <p style="font-size: 0.875rem; color: var(--text);"><b>SAAD:</b> progress!</p>
+        </div>
       </article>
 
       <article class="post-card">
-        <div class="post-author">
+        <div class="post__author">
           <img src="./images/avatar.jfif" alt="Hira Khan profile" class="author-avatar">
           <div class="author-info">
             <span class="author-name">Sajeela Khan</span>
             <span class="post-time">Posted on: 2026-06-13</span>
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="display: block; margin-right: -9px;"></span>
+              <div style="font-size: x-small;  color: var(--text-muted);">Delete</div>
+              <div style="font-size: x-small;   color: var(--text-muted);">Edit</div>
+            </div>
+
+
           </div>
         </div>
         <h3 class="post-title">Weekend Plans</h3>
         <p class="post-content">Family are important as much as friends who stays by your side in hard times.</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvnjpnQPw3P-xNQJ_mt56k3C1271oUG7O1RYa6Sy4KA&s=10" alt="Post Image 3" class="post-image"
-          loading="lazy">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvnjpnQPw3P-xNQJ_mt56k3C1271oUG7O1RYa6Sy4KA&s=10"
+          alt="Post Image 3" class="post-image" loading="lazy">
         <footer class="post-footer">
-          <button class="post-action-btn" type="button">Like ❤️</button>
-          <button class="post-action-btn" type="button">Comment 💭</button>
+          <button class="post-action-btn" id="likeBtn3" type="button">Like ❤️ <span id="count3">8</span></button>
+          <button class="post-action-btn" id="commentBtn3" type="button">Comment 💭</button>
           <button class="post-action-btn" type="button">Share 🔗</button>
         </footer>
+        <div id="commentBox3"
+          style="display: none; margin-top: 10px; padding: 10px; background: var(--bg); border-radius: 8px;">
+          <p style="font-size: 0.875rem; color: var(--text);"><b>Aliaa:</b> Totally agree!</p>
+        </div>
       </article>
     </section>
 
 
 
 
+
     <aside class="right-sidebar">
-      <div class="sidebar-widget">
+      <div class="sidebarma">
+
         <h3 class="widget-title">Suggested Friends</h3>
         <div class="suggestion-list">
 
- <!--/-*    <div class="suggestion-item"></div>         */--> 
-          
-  <div class="suggestion-item">
+          <!--/-*    <div class="suggestion-item"></div>         */-->
+
+          <div class="suggestion-item">
 
             <div class="suggestion-user">
 
               <img src="./images/avatar.jfif" alt="AYYAN profile" class="suggestion-avatar">
               <div class="suggestion-details">
-                <span class="suggestion-name">Ayyan</span>
-                <span class="suggestion-mutual">3 mutual friends</span>
+
+                <h5 class="suggname">Ayyan</h5>
+                <h6 class="suggestion__mutual">3 mutual friends</h6>
               </div>
             </div>
             <button class="btn btn-secondary" type="button">Add</button>
@@ -171,34 +243,38 @@
             <div class="suggestion-user">
               <img src="./images/avatar.jfif" alt="Mike Chen profile" class="suggestion-avatar">
               <div class="suggestion-details">
-                <span class="suggestion-name">usman akhbar</span>
-                <span class="suggestion-mutual">1 mutual friend</span>
+                <h5 class="suggname">usman akhbar</h5>
+                <h6 class="suggestion__mutual">1 mutual friend</h6>
               </div>
             </div>
+
             <button class="btn btn-secondary" type="button">Add</button>
           </div>
           <div class="suggestion-item">
             <div class="suggestion-user">
               <img src="./images/avatar.jfif" alt="Emma Davis profile" class="suggestion-avatar">
               <div class="suggestion-details">
-                <span class="suggestion-name">Aliaa</span>
-                <span class="suggestion-mutual">2 mutual friends</span>
+                <h5 class="suggname">Aliaa</h5>
+                <h6 class="suggestion__mutual">2 mutual friends</h6>
               </div>
             </div>
+
             <button class="btn btn-secondary" type="button">Add</button>
           </div>
         </div>
       </div>
 
 
-      <div class="sidebar-widget">
+      <div class="sidebarma">
         <h3 class="widget-title">Trending Topics</h3>
         <div class="trend-list">
           <div class="trend-item">
+
             <span class="trend-tag">#WebDevelopment</span>
             <span class="trend-posts">12k posts</span>
           </div>
           <div class="trend-item">
+
             <span class="trend-tag">#StudyRoutine</span>
             <span class="trend-posts">8.3k posts</span>
           </div>
@@ -206,15 +282,309 @@
           <div class="trend-item">
             <span class="trend-tag">#TravelDiaries</span>
             <span class="trend-posts">4.1k posts</span>
+
           </div>
         </div>
       </div>
+
+
     </aside>
   </main>
 
   <footer class="footer">
     <p>&copy; 2026 ALI WORLD. All rights reserved.</p>
   </footer>
+
+
+  <script src="javascript.js"></script>
+  <script>
+
+    // Closure Counter Function
+    function makeCounter(initialCount) {
+      let count = initialCount;
+      return {
+        increment() {
+          count++;
+          return count;
+        },
+        decrement() {
+          count--;
+          return count;
+        },
+        getCount() {
+          return count;
+        }
+      };
+    }
+
+    // Helper function to setup Like button with toggle & persistence
+   let savedLike1 = parseInt(localStorage.getItem("likeCount1")) || 12;
+         let isLiked1 = localStorage.getItem("isLiked1") === "true";
+
+         const counter1 = makeCounter(savedLike1);
+         const countOutput1 = document.getElementById("count1");
+         const likeBtn1 = document.getElementById("likeBtn1");
+
+        countOutput1.textContent = counter1.getCount();
+
+        if (isLiked1) {
+          likeBtn1.style.color = "red";
+        }
+
+        likeBtn1.addEventListener("click", function () {
+
+    if (isLiked1) {
+        countOutput1.textContent = counter1.decrement();
+        likeBtn1.style.color = "";
+        isLiked1 = false;
+    } else {
+        countOutput1.textContent = counter1.increment();
+        likeBtn1.style.color = "red";
+        isLiked1 = true;
+    }
+
+              localStorage.setItem("likeCount1", counter1.getCount());
+            localStorage.setItem("isLiked1", isLiked1);
+
+       });
+
+       let savedLike2 = parseInt(localStorage.getItem("likeCount2")) || 5;
+          let isLiked2 = localStorage.getItem("isLiked2") === "true";
+
+          const counter2 = makeCounter(savedLike2);
+          const countOutput2 = document.getElementById("count2");
+          const likeBtn2 = document.getElementById("likeBtn2");
+
+          countOutput2.textContent = counter2.getCount();
+
+          if (isLiked2) {
+              likeBtn2.style.color = "red";
+          }
+
+           likeBtn2.addEventListener("click", function () {
+
+          if (isLiked2) {
+             countOutput2.textContent = counter2.decrement();
+             likeBtn2.style.color = "";
+             isLiked2 = false;
+          } else {
+             countOutput2.textContent = counter2.increment();
+             likeBtn2.style.color = "red";
+             isLiked2 = true;
+          }
+
+             localStorage.setItem("likeCount2", counter2.getCount());
+            localStorage.setItem("isLiked2", isLiked2);
+
+});
+
+
+          let savedLike3 = parseInt(localStorage.getItem("likeCount3")) || 8;
+              let isLiked3 = localStorage.getItem("isLiked3") === "true";
+
+             const counter3 = makeCounter(savedLike3);
+             const countOutput3 = document.getElementById("count3");
+             const likeBtn3 = document.getElementById("likeBtn3");
+
+             countOutput3.textContent = counter3.getCount();
+
+         if (isLiked3) {
+          likeBtn3.style.color = "red";
+         }
+
+      likeBtn3.addEventListener("click", function () {
+
+    if (isLiked3) {
+        countOutput3.textContent = counter3.decrement();
+        likeBtn3.style.color = "";
+        isLiked3 = false;
+    } else {
+        countOutput3.textContent = counter3.increment();
+        likeBtn3.style.color = "red";
+        isLiked3 = true;
+    }
+
+    localStorage.setItem("likeCount3", counter3.getCount());
+    localStorage.setItem("isLiked3", isLiked3);
+
+    });
+
+
+document.getElementById("commentBtn1").addEventListener("click", function () {
+
+    const box = document.getElementById("commentBox1");
+
+   /* box.style.display =
+        box.style.display === "none"
+            ? "block"
+            : "none";
+          */
+         if (box.style.display === "none") {
+               box.style.display = "block";
+         } else {
+             box.style.display = "none"; 
+          } 
+          
+          
+});
+   document.getElementById("commentBtn2").addEventListener("click", function () {
+
+    const box = document.getElementById("commentBox2");
+
+    box.style.display =box.style.display === "none"? "block": "none";
+
+});
+            document.getElementById("commentBtn3").addEventListener("click", function () {
+
+              const box = document.getElementById("commentBox3");
+
+            box.style.display =box.style.display === "none"? "block": "none";
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 3. Plus Button: Show / Hide Create Post Box
+    const plusBtn = document.getElementById("plusBtn");
+    const postBox = document.getElementById("postBox");
+
+    if (plusBtn && postBox) {
+      plusBtn.addEventListener("click", function () {
+        postBox.style.display = postBox.style.display === "none" ? "block" : "none";
+      });
+    }
+
+    // Character Counter on Post Textarea
+    const postContent = document.getElementById("postContent");
+    const charCount = document.getElementById("charCount");
+
+    if (postContent && charCount) {
+      postContent.addEventListener("input", function () {
+        let remaining = 280 - postContent.value.length;
+
+        charCount.textContent = remaining + " characters remaining";
+        if (remaining <= 20) {
+          charCount.style.color = "red";
+        } else {
+          charCount.style.color = "green";
+        }
+      });
+    }
+
+  
+    const addPostBtn = document.getElementById("addPostBtn");
+    if (addPostBtn) {
+
+      addPostBtn.addEventListener("click", function () {
+        let title = document.getElementById("postTitle").value.trim();
+        let content = postContent.value.trim();
+        let imageFile = document.getElementById("postImageFile");
+      
+       // if (title === "" || content === "") return;
+
+    
+        const newArticle = document.createElement("article");
+        newArticle.className = "post-card";
+        newArticle.innerHTML = `
+          <div class="post__author">
+            <img src="./images/avatar.jfif" alt="avatar" class="author-avatar">
+            <div class="author-info">
+              <h6 class="author-name">ALI NAWAZ</h6>
+              <span class="post-time">Posted on: 2026-07-30</span>
+            </div>
+          </div>
+          <h3 class="post-title">${title}</h3>
+          <p class="post-content">${content}</p>
+          ${imageFile}
+          <footer class="post-footer">
+            <button class="post-action-btn" type="button">Like ❤️ <span>0</span></button>
+            <button class="post-action-btn" type="button">Comment 💭</button>
+            <button class="post-action-btn" type="button">Share 🔗</button>
+          </footer>
+        `;
+
+        document.querySelector(".main-feed").appendChild(newArticle);
+
+        document.getElementById("postTitle").value = "";
+        postContent.value = "";
+        if (imageFile) imageFile.value = "";
+
+        charCount.textContent = "280 characters remaining";
+        charCount.style.color = "var(--text-muted)";
+        postBox.style.display = "none";
+      });
+    }
+
+    // 6. Search Bar Real-Time Filter
+    const searchInput = document.querySelector(".search-input");
+    const searchForm = document.querySelector(".search-form");
+
+    if (searchInput) {
+      searchInput.addEventListener("input", function () {
+        let filter = searchInput.value.toLowerCase();
+        let posts = document.querySelectorAll(".post-card");
+
+        posts.forEach(function (post) {
+          let titleEl = post.querySelector(".post-title");
+
+          let contentEl = post.querySelector(".post-content");
+
+          let title = titleEl ? titleEl.textContent.toLowerCase() : "";
+          let content = contentEl ? contentEl.textContent.toLowerCase() : "";
+
+          if (title.includes(filter) || content.includes(filter)) {
+
+            post.style.display = "block";
+          } else {
+            post.style.display = "none";
+          }
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>
+
+
+
+
+<!----
+document.getElementById("addPostBtn").addEventListener("click", function () {
+
+    const title = document.getElementById("postTitle").value;
+    const content = document.getElementById("postContent").value;
+    const image = document.getElementById("postImageFile").files[0];
+    //getting all values    
+
+    if (!title || !content) return;
+
+    //create article and puting in main feed
+    const article = document.createElement("article");
+    article.className = "post-card";
+
+    article.innerHTML = `
+        <h3>${title}</h3>
+        <p>${content}</p>
+        ${image}`;
+
+    document.querySelector(".main-feed").appendChild(article);
+
+    //restarting all
+    document.getElementById("postTitle").value = "";
+    document.getElementById("postContent").value = "";
+    document.getElementById("postImageFile").value = "";
+
+});-->
